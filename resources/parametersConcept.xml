@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">   <!--Use the parameters at Suite level and Test level // Suite level parameters are applicable all the methods and Test level parameters are applicable for single method -->
+    <parameter name="browserName" value="Chrome"/>  <!-- Suite level parameters -->
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+    <parameter name="username" value="Admin"/>
+    <parameter name="password" value="admin123"/>
+    <test  name="Login">
+        <parameter name="browserName" value="Edge"/>  <!-- Test level parameters , Edge browser is used -->
+        <classes>
+            <class name="TestNG.Parameters.parametersConcept">
+                <methods>
+                    <include name="NavigateToPage"/>
+                    <include name="LoginDetails"/>
+                    <include name="VerifyLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test thread-count="5" name="MyInfo">
+        <parameter name="browserName" value="Chrome"/>       <!--Chrome browser is used -->
+        <classes>
+            <class name="TestNG.Parameters.parametersConcept">
+                <methods>
+                    <include name="NavigateToPage"/>
+                    <include name="LoginDetails"/>
+                    <include name="NavigateToMyInfo"/>
+                    <include name="VerifyMyInfo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

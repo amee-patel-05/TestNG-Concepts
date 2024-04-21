@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DemoSuite">
+	<test thread-count="5" name="Login" enabled="true">
+		<classes>
+			<class name="TestNG.XMLConcept.OrangeHRM">
+				<methods>
+					<include name="LaunchApp"/>
+					<include name="LoginDetails"/>
+					<include name="VerifyLogin"/>
+					<include name="CloseMethod"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="MyInfo" enabled="false">
+		<classes>
+			<class name="TestNG.XMLConcept.OrangeHRM">
+				<methods>
+					<include name="LaunchApp"/>
+					<include name="LoginDetails"/>
+					<include name="NavigateToMyInfo"/>
+					<include name="VerifyMyInfo"/>
+					<include name="CloseMethod"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="Admin" enabled="true">
+		<classes>
+			<class name="TestNG.XMLConcept.OrangeHRM">
+				<methods>
+					<include name="LaunchApp"/>
+					<include name="LoginDetails"/>
+					<include name="NavigateToAdmin"/>
+					<include name="UserManagement"/>
+					<include name="ClickOnUser"/>
+					<include name="VerifyUsersDetails"/>
+					<include name="CloseMethod"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="ToolsQA" enabled="false">
+		<classes>
+			<class name="TestNG.FirstTestNG">
+				<methods>
+					<include name="TestMethodToolsQA"/>
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 

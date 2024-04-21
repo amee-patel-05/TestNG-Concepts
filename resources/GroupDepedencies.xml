@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Projects/Automation/TestNGConcepts/pom.xml">
+        <groups>
+            <dependencies>
+                <group name="regression" depends-on="smoke"/>
+                <group name="sanity" depends-on="regression"/>
+                <group name="load" depends-on="sanity"/>
+                <group name="stress" depends-on="load"/>
+                <group name="functional" depends-on="stress"/>
+
+            </dependencies>
+        </groups>
+
+        <classes>
+            <class name="TestNG.Groups.GroupDependencies"/>
+        </classes>
+    </test>
+</suite>

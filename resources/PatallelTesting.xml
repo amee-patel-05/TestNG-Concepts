@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--<suite name="DemoSuite" parallel="methods" thread-count="2"> -->      <!-- parallel execution at methods level -->
+
+<!--<suite name="DemoSuite" parallel="classes" thread-count="2"> -->      <!-- parallel execution at classes level -->
+
+<suite name="DemoSuite" parallel="tests" thread-count="2">                <!-- parallel execution at tests level -->
+
+    <test name="test1" >
+        <classes>
+            <class name="TestNG.ParallelTesting.ParallelTest1"/>
+        </classes>
+    </test>
+
+    <test name="test2" >
+        <classes>
+            <class name="TestNG.ParallelTesting.ParallelTest2"/>
+        </classes>
+    </test>
+
+</suite>

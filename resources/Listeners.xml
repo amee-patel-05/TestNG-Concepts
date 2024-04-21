@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="TestNG.Listeners.CustomListeners"/>
+    </listeners>
+
+    <test name="test1">
+        <classes>
+            <class name="TestNG.Listeners.ListenerTest">
+                <methods>
+                    <include name="TestMethod1"/>
+                    <include name="TestMethod2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <classes>
+            <class name="TestNG.Listeners.ListenerTest">
+                <methods>
+                    <include name="TestMethod3"/>
+                    <include name="TestMethod4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

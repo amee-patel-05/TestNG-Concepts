@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="OrangeHRM">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="author" value="Suresh"/>
+        <classes>
+            <class name="TestNG.AnnotationExtentReport.MainTest">
+                <methods>
+                    <include name="OrangeHRM"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="ToolsQA">
+        <parameter name="browserName" value="Edge"/>
+        <parameter name="author" value="Mahesh"/>
+        <classes>
+            <class name="TestNG.AnnotationExtentReport.MainTest">
+                <methods>
+                    <include name="ToolsQA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="eCommerce">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="author" value="Nilesh"/>
+        <classes>
+            <class name="TestNG.AnnotationExtentReport.MainTest">
+                <methods>
+                    <include name="eCommerce"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Google">
+        <parameter name="browserName" value="Edge"/>
+        <parameter name="author" value="paresh"/>
+        <classes>
+            <class name="TestNG.AnnotationExtentReport.MainTest">
+                <methods>
+                    <include name="Google"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

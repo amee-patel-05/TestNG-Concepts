@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <groups>                            <!-- Suite Level Grouping -->
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+
+    <test name="GroupConcepts">
+
+    <groups>                            <!-- Test level Grouping -->
+        <run>
+            <include name="sanity"/>
+        </run>
+    </groups>
+<!--        <groups>-->
+
+            <!--  Meta Groups - Group of Groups  -->
+
+     <!--       <define name="MainGroup1">
+                <include name="smoke"/>
+                <include name="Sanity"/>
+            </define>
+
+            <define name="MainGroup2">
+                <include name="regression"/>
+                <include name="functional"/>
+                <include name="Sanity"/>
+            </define>       -->
+
+<!--            <run>-->
+<!--                <include name="MainGroup2"/> -->
+<!--                <include name="all"/>    &lt;!&ndash; Partial Groups &ndash;&gt;-->
+<!--            </run>-->
+
+        <!--    <run>   -->
+        <!--        <include name="sanity"/>  -->  <!-- Test Groups -->
+        <!--        <include name="smoke"/>  -->
+        <!--        <exclude name="regression"/>    -->    <!-- Exclusion Groups-->
+        <!--    </run>   -->
+
+<!--        </groups>-->
+        <classes>
+            <class name="TestNG.Groups.Groups1"/>
+        </classes>
+    </test>
+</suite>
